@@ -14,11 +14,10 @@ public class ModCreativeModTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, TutorialMod.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE_TABS.register("tutorial_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.RAINBOW.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.STEEL.get()))
                     .title(Component.translatable("creativetab.tutorial_tab"))
                     .displayItems((pParameters, pOutput) -> {
-                        pOutput.accept(ModItems.RAINBOW.get());
-
+                        pOutput.accept(ModItems.STEEL.get());
 
                     })
                     .build());

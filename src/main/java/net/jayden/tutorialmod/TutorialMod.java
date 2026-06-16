@@ -1,6 +1,7 @@
 package net.jayden.tutorialmod;
 
 import com.mojang.logging.LogUtils;
+import net.jayden.tutorialmod.block.ModBlocks;
 import net.jayden.tutorialmod.item.ModCreativeModTabs;
 import net.jayden.tutorialmod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -30,6 +31,7 @@ public class TutorialMod
         ModCreativeModTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -43,7 +45,7 @@ public class TutorialMod
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
-            event.accept(ModItems.RAINBOW);
+            event.accept(ModItems.STEEL);
         }
     }
 
